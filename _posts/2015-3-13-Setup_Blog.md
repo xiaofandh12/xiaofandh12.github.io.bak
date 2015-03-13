@@ -10,21 +10,21 @@ comments: true
 # GitHub Pages
 参考[GitHub Pages](https://pages.github.com)
 
-1.  Create a new repository: xiaofandh12.github.io
-2.  Clone the repository
+1. Create a new repository: xiaofandh12.github.io
+2. Clone the repository
    
     ```
     git clone https://github.com/xiaofandh12/xiaofandh12.github.io
     ```
 
-3.  Hello World
+3. Hello World
     
     ```
     cd xiaofandh12.github.io
     echo "Hello World" > index.html
     ```
 
-4.  Push it
+4. Push it
 
     ```
     git add --all
@@ -44,7 +44,9 @@ comments: true
     rm -rf *
     ```
 
-5. Modify comments.ext
+5. Regesiter [disqus](https://disqus.com/)
+
+6. Modify comments.ext
     
     ```
     cd xiaofandh12.github.io/_includes
@@ -52,7 +54,7 @@ comments: true
     var disqus_shortname = 'minixalpha'; => var disqus_shortname = 'xiaofandh12';
     ```
 
-6. Modify default.html
+7. Modify default.html
 
     ```
     cd xiaofandh12.github.io/_layouts
@@ -60,28 +62,28 @@ comments: true
     潇湘夜雨 => 游戏人生
     ```
 
-7. Modify gen_archives.rb
+8. Modify gen_archives.rb
     
     ```
     cd xiaofandh12.github.io/_plugins
     vim gen_archives.rb
     deep_merge => merge
     ```
-8. Delete all the files in _posts
+9. Delete all the files in _posts
 
     ```
     cd xiaofandh12.github.io/_posts
     rm -rf *
     ```
 
-9. Delte all the files in _site
+10. Delte all the files in _site
 
     ```
     cd xiaofandh12.github.io/_site
     rm -rf *
     ```
 
-10. 平常写博客的流程：在_posts/下用Markdown写好博客，保存，退到xiaofandh12.github.io, 然后make即可
+11. 平常写博客的流程：在_posts/下用Markdown写好博客，保存，退到xiaofandh12.github.io, 然后make即可
 
-以上内容参考自博客[使用 GitHub, Jekyll 打造自己的免费独立博客](http://blog.csdn.net/on_1y/article/details/19259435), GitHub上的[源代码](https://github.com/minixalpha/minixalpha.github.io), 对应的[博客](minixalpha.github.io)
+以上内容参考自博客[使用 GitHub, Jekyll 打造自己的免费独立博客](http://blog.csdn.net/on_1y/article/details/19259435)(这篇博客在原理方面的介绍也很出色，对于理解Github+Jekyll来建立博客讲得很清楚), GitHub上的[源代码](https://github.com/minixalpha/minixalpha.github.io), 对应的[博客](http://minixalpha.github.io)
 
