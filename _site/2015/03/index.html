@@ -140,6 +140,44 @@ git commit -m &quot;Initial commit&quot;
 git push -u origin master
 </code></pre></div></li>
 </ol>
+
+<h1>Use minixalpha.github.io</h1>
+
+<ol>
+<li>Download <a href="https://github.com/minixalpha/minixalpha.github.io.git">minixalpha.github.io-source.zip</a></li>
+<li>Extract minixalpha.github.io-source.zip =&gt; minixalph.github.io-source</li>
+<li>Copy the files in minixal.github.io-source to xiaofandh12.github.io</li>
+<li><p>Delete blog-images/*</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/assets/blog-images
+rm -rf *
+</code></pre></div></li>
+<li><p>Modify comments.ext</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_includes
+vim comments.ext
+var disqus_shortname = &#39;minixalpha&#39;; =&gt; var disqus_shortname = &#39;xiaofandh12&#39;;
+</code></pre></div></li>
+<li><p>Modify default.html</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_layouts
+vim default.html
+潇湘夜雨 =&gt; 游戏人生
+</code></pre></div></li>
+<li><p>Modify gen_archives.rb</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_plugins
+vim gen_archives.rb
+deep_merge =&gt; merge
+</code></pre></div></li>
+<li><p>Delete all the files in _posts</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_posts
+rm -rf *
+</code></pre></div></li>
+<li><p>Delte all the files in _site</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_site
+rm -rf *
+</code></pre></div></li>
+<li><p>平常写博客的流程：在_posts/下用Markdown写好博客，保存，退到xiaofandh12.github.io, 然后make即可</p></li>
+</ol>
+
+<p>以上内容参考自博客<a href="http://blog.csdn.net/on_1y/article/details/19259435">使用 GitHub, Jekyll 打造自己的免费独立博客</a>, GitHub上的<a href="https://github.com/minixalpha/minixalpha.github.io">源代码</a>, 对应的<a href="minixalpha.github.io">博客</a></p>
  
         <a href="/%E5%80%9F%E9%89%B4/2015/03/13/Setup_Blog.html"> Read More ... </a> </br>
       </div>
