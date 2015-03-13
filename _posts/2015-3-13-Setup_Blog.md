@@ -12,7 +12,7 @@ comments: true
 
 * Create a new repository: xiaofandh12.github.io
 * Clone the repository
-    '''
+    '''python
     git clone https://github.com/xiaofandh12/xiaofandh12.github.io
     '''
 * Hello World
