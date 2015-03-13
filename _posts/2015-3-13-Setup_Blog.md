@@ -7,19 +7,22 @@ comments: true
 
 本博客的搭建毫无技术可言，完全是抄袭[minixalpha](http://minixalpha.github.io)的.
 
-#Websites for you
+#GitHub Pages
 参考[GitHub Pages](https://pages.github.com)
 
-* Create a new repository:xiaofandh12.github.io
-* clone
+* Create a new repository: xiaofandh12.github.io
+* Clone the repository
 '''
-* git clone https://github.com/xiaofandh12/xiaofandh12.github.io
+    git clone https://github.com/xiaofandh12/xiaofandh12.github.io
 '''
-* 同步
+* Hello World
 '''
-* cd xiaofandh12.github.io
-* echo "Hello World" > index.html
-* git add --all
-* git commit -m "Initial commit"
-* git push -u origin master
+    cd xiaofandh12.github.io
+    echo "Hello World" > index.html
+'''
+* Push it
+'''
+    git add --all
+    git commit -m "Initial commit"
+    git push -u origin master
 '''
