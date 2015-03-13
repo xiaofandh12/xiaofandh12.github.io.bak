@@ -87,4 +87,7 @@ comments: true
 
 以上内容参考自博客[使用 GitHub, Jekyll 打造自己的免费独立博客](http://blog.csdn.net/on_1y/article/details/19259435)(这篇博客在原理方面的介绍也很出色，对于理解Github+Jekyll来建立博客讲得很清楚), GitHub上的[源代码](https://github.com/minixalpha/minixalpha.github.io), 对应的[博客](http://minixalpha.github.io)
 
-![miao](/assets/blog-images/miao.jpg)
+![miao](/assets/blog-images/miao.png)
+问：为什么这里会插入一张图片呢？
+
+答：因为我想试一试怎么在博客中插入图片...
