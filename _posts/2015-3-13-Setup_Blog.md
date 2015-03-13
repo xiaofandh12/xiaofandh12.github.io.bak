@@ -12,17 +12,17 @@ comments: true
 
 * Create a new repository: xiaofandh12.github.io
 * Clone the repository
-    '''python
+    ```
     git clone https://github.com/xiaofandh12/xiaofandh12.github.io
-    '''
+    ```
 * Hello World
-    '''
+    ```
     cd xiaofandh12.github.io
     echo "Hello World" > index.html
-    '''
+    ```
 * Push it
-    '''
+    ```
     git add --all
     git commit -m "Initial commit"
     git push -u origin master
-    '''
+    ```
