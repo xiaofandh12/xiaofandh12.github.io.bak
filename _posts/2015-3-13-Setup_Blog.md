@@ -5,7 +5,7 @@ category: 借鉴
 comments: true
 ---
 
-本博客的搭建毫无技术可言，完全是抄袭[minixalpha](http://minixalpha.github.io)的.
+本博客的搭建抄袭于[minixalpha](http://minixalpha.github.io)的.
 
 # GitHub Pages
 参考[GitHub Pages](https://pages.github.com)
