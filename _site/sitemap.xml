@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xiaofandh12.github.io/research/2015/05/19/Antarctica.html</loc>
+    
+    <lastmod>2015-05-19T00:00:00+08:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>http://xiaofandh12.github.io/%E5%80%9F%E9%89%B4/2015/03/13/Setup_Blog.html</loc>
     
     <lastmod>2015-03-13T00:00:00+08:00</lastmod>
@@ -18,6 +27,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  
+  
+  
   
   
   
