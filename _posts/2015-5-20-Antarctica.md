@@ -1,9 +1,8 @@
 ---
-published: true
-layout: post
+layout: default
 title: 南极洲
-date: 2015-5-20
 category: Research
+comments: true
 ---
 # 简介
 
