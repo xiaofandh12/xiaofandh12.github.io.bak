@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 本博客是如何搭建的
-category: 借鉴
+category: 博客搭建
 comments: true
 ---
 
