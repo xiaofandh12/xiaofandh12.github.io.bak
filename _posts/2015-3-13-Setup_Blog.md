@@ -76,7 +76,7 @@ comments: true
     rm -rf *
     ```
 
-10. Delte all the files in _site
+10. Delete all the files in _site
 
     ```
     cd xiaofandh12.github.io/_site

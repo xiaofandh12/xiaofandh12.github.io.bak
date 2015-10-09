@@ -8,8 +8,11 @@ comments: true
 由于公司中使用的Linux操作系统为CentOS release 6.6 (Final)，所以最开始是希望可以在这个操作系统上搭建起我博客的写作环境，折腾了一天我放弃了，有空再看该怎么弄吧！
 
 1. 安装Windows7
+
 2. 安装VMware workstation
+
 3. 下载Ubuntu14.04 LTS，在VMware workstation的虚拟机中安装
+
 4. 下载ruby-2.2.3.tar.gz，并安装ruby-2.2.3
 
     ```
@@ -91,7 +94,6 @@ comments: true
     在浏览器中输入xiaofandh12.github.io即可看到了
     ```
 
-12.
-关于Openssl：可以看到我们的gem源使用的是http://rubygems.org/，而不是https://rubygems.org，原因就是没有安装Openssl，无法使用https://rubygems.org，而Openssl的安装总是出错，故就选择不安装Openssl了，幸好http://rubygems.org这个源没有出问题，不然没办法还得返回去安装Openssl。国内gem源很有名的就是https://ruby.taobao.org/，因为没有Openssl，所以无法使用，在网站ruby.taobao.org上我们看到了通知”我们将于2015年10月1日起停止http协议的镜像，请在配置中使用https协议代替“。哎，再早一点的话gem源应该还是可以使用http://ruby.taobao.org的。
+12. 关于Openssl：可以看到我们的gem源使用的是http://rubygems.org/，而不是https://rubygems.org，原因就是没有安装Openssl，无法使用https://rubygems.org，而Openssl的安装总是出错，故就选择不安装Openssl了，幸好http://rubygems.org这个源没有出问题，不然没办法还得返回去安装Openssl。国内gem源很有名的就是https://ruby.taobao.org/，因为没有Openssl，所以无法使用，在网站ruby.taobao.org上我们看到了通知”我们将于2015年10月1日起停止http协议的镜像，请在配置中使用https协议代替“。哎，再早一点的话gem源应该还是可以使用http://ruby.taobao.org的。
 
 
