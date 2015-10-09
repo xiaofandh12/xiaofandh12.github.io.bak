@@ -3,8 +3,8 @@ markdown: redcarpet
 redcarpet:
     extensions: [tables]
 safe: false
-<!-- highlighter: pygments -->
-pygments: true
+highlighter: pygments
+<!-- pygments: true -->
 excerpt_separator: "\n\n\n"
 paginate: 5
 sitemapurl: "http://xiaofandh12.github.io"
