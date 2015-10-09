@@ -43,7 +43,7 @@
 
     <!-- Google Analytics End -->
 
-    <title>Monthly archive for 2015/3</title>
+    <title>恢复博客的写作环境</title>
   </head>
 
   <body>
@@ -86,7 +86,7 @@
             
       
             
-                <li>
+                <li style="background-color: #444">
                 <a href="/categories/博客搭建"> 博客搭建 (2) </a>
                 </li>
             
@@ -169,104 +169,95 @@
 
       <article>
 
-<div class="post-list">
-    <ul>
-
-    <li>
-      <div class="post-title">
-        <a href="/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2015/03/13/Setup_Blog.html"> 本博客是如何搭建的</a> </br>
-      </div>
-
-      <div class="post-info">
-        <ol>
-          <li class="post-time">2015-03-13</li> 
-          <li class="post-category"> 博客搭建 </li>
-        </ol>
-      </div>
-
-      <div class="post-preview">
-        <p>本博客的搭建完全参照于<a href="http://minixalpha.github.io">minixalpha</a>的.</p>
-
-<h1>GitHub Pages</h1>
-
-<p>参考<a href="https://pages.github.com">GitHub Pages</a></p>
+<p>由于公司中使用的Linux操作系统为CentOS release 6.6 (Final)，所以最开始是希望可以在这个操作系统上搭建起我博客的写作环境，折腾了一天我放弃了，有空再看该怎么弄吧！</p>
 
 <ol>
-<li>Create a new repository: xiaofandh12.github.io</li>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/xiaofandh12/xiaofandh12.github.io
+<li>安装Windows7</li>
+<li>安装VMware workstation</li>
+<li>下载Ubuntu14.04 LTS，在VMware workstation的虚拟机中安装</li>
+<li><p>下载ruby-2.2.3.tar.gz，并安装ruby-2.2.3</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd /home/donghao
+wget http://cache.ruby-lang.org/pub/ruby/ruby-2.2.3.tar.gz
+tar zxvf ruby-2.2.3.tar.gz
+cd ruby-2.2.3
+./configure
+sudo make
+sudo make install
+ruby -v
 </code></pre></div></li>
-<li><p>Hello World</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io
-echo &quot;Hello World&quot; &gt; index.html
+<li><p>下载rubygems-2.2.2.tgz，并安装rubygems-2.2.2</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd /home/donghao
+wget http://production.cf.rubygems.org/rubygems/rubygems-2.2.2.tgz
+tar zxvf rubygems-2.2.2.tgz
+cd rubygems-2.2.2
+sudo ruby setup.rb
+gem -v
 </code></pre></div></li>
-<li><p>Push it</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git add --all
-git commit -m &quot;Initial commit&quot;
-git push -u origin master
+<li><p>安装zlib</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo apt-get install zlib1g-deb
+cd /home/donghao/ruby-2.2.3/ext/zlib/
+sudo ruby extconf.rb
+sudo make
+sudo make install
+</code></pre></div></li>
+<li><p>安装Jekyll</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">gem sources -r https://rubygems.org/
+gem sources -a http://rubygems.org/
+gem sources -l
+sudo gem install jekyll
+jekyll -v
+</code></pre></div></li>
+<li><p>运行jekyll出现错误：Could not find a Javascript runtime，解决：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+</code></pre></div></li>
+<li><p>安装git，并设置</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo apt-get install git
+git config --global user.name &quot;xiaofandh12&quot;
+git config --global user.email &quot;photodh@126.com&quot;
+git config --list
+</code></pre></div></li>
+<li><p>获取xiaofandh12.github.io</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd /home/donghao/
+git clone https://github.com/xiaofandh12/xiaofandh12.github.io.git/
+</code></pre></div></li>
+<li><p>写博客</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd /home/donghao/xiaofandh12.github.io/
+git checkout source
+cd _posts
+使用Markdown，按照要求写好博客
+cd /home/donghao/xiaofandh12.github.io/
+make
+在浏览器中输入xiaofandh12.github.io即可看到了
 </code></pre></div></li>
 </ol>
 
-<h1>Use minixalpha.github.io</h1>
-
-<ol>
-<li>Download <a href="https://github.com/minixalpha/minixalpha.github.io.git">minixalpha.github.io-source.zip</a></li>
-<li>Extract minixalpha.github.io-source.zip =&gt; minixalpha.github.io-source</li>
-<li>Copy the files in minixalpha.github.io-source to xiaofandh12.github.io</li>
-<li><p>Delete blog-images/*</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/assets/blog-images
-rm -rf *
-</code></pre></div></li>
-<li><p>在<a href="https://disqus.com/">disqus</a>上面注册，并添加一个站点</p></li>
-<li><p>Modify comments.ext</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_includes
-vim comments.ext
-var disqus_shortname = &#39;minixalpha&#39;; =&gt; var disqus_shortname = &#39;xiaofandh12&#39;;
-</code></pre></div></li>
-<li><p>Modify default.html</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_layouts
-vim default.html
-潇湘夜雨 =&gt; 游戏人生
-</code></pre></div></li>
-<li><p>Modify gen_archives.rb</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_plugins
-vim gen_archives.rb
-deep_merge =&gt; merge
-</code></pre></div></li>
-<li><p>Delete all the files in _posts</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_posts
-rm -rf *
-</code></pre></div></li>
-<li><p>Delte all the files in _site</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd xiaofandh12.github.io/_site
-rm -rf *
-</code></pre></div></li>
-<li><p>平常写博客的流程：在_posts/下用Markdown写好博客，保存，退到xiaofandh12.github.io, 然后make即可</p></li>
-</ol>
-
-<p>以上内容参考自博客<a href="http://blog.csdn.net/on_1y/article/details/19259435">使用 GitHub, Jekyll 打造自己的免费独立博客</a>(这篇博客在原理方面的介绍很出色，对于理解Github+Jekyll来建立博客很有好处), GitHub上的<a href="https://github.com/minixalpha/minixalpha.github.io">源代码</a>, 对应的<a href="http://minixalpha.github.io">博客</a></p>
-
-<p>阮一峰的博客<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门</a>是一个用GitHub, Jekyll搭建博客非常好的入门文章</p>
-
-<p><img src="/assets/blog-images/miao.jpg" alt="miao"></p>
-
-<p>问：为什么这里会插入一张图片呢？</p>
-
-<p>答：因为我想试一试怎么在博客中插入图片...</p>
- 
-        <a href="/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/2015/03/13/Setup_Blog.html"> Read More ... </a> </br>
-      </div>
-    </li>
-
-
-    </ul>
-  </div>
-</div>
+<p>12.
+关于Openssl：可以看到我们的gem源使用的是http://rubygems.org/，而不是https://rubygems.org，原因就是没有安装Openssl，无法使用https://rubygems.org，而Openssl的安装总是出错，故就选择不安装Openssl了，幸好http://rubygems.org这个源没有出问题，不然没办法还得返回去安装Openssl。国内gem源很有名的就是https://ruby.taobao.org/，因为没有Openssl，所以无法使用，在网站ruby.taobao.org上我们看到了通知”我们将于2015年10月1日起停止http协议的镜像，请在配置中使用https协议代替“。哎，再早一点的话gem源应该还是可以使用http://ruby.taobao.org的。</p>
 
 
       </article>
 
       <div class="comments">
+        
+          <div id="disqus_thread"></div>
+ <script type="text/javascript">
+     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+     var disqus_shortname = 'xiaofandh12'; // required: replace example with your forum shortname
+
+     /* * * DON'T EDIT BELOW THIS LINE * * */
+     (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
         
       </div>
 

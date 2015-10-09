@@ -1,9 +1,9 @@
---
+---
 layout: default
 title: 恢复博客的写作环境
 category: 博客搭建
 comments: true
---
+---
 
 由于公司中使用的Linux操作系统为CentOS release 6.6 (Final)，所以最开始是希望可以在这个操作系统上搭建起我博客的写作环境，折腾了一天我放弃了，有空再看该怎么弄吧！
 
